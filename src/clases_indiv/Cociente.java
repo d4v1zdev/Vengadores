@@ -65,7 +65,7 @@ public class Cociente {
 	 * <b>numero que debes multiplicar a cualquier numero diferente de 0</b> para que el
 	 * resultado sea 1. Tambien es conocido como <b>reciproco</b> tiene en cuenta si
 	 * introducimos un valor 0, ya que el 0 no tiene inverso que lanzaria un error,
-	 * pero <b>no generaria excepcion</b>, nos indicaría que tipo de excepcion.
+	 * pero <b>no generaria excepcion</b>, nos indicara que tipo de excepcion.
 	 * 
 	 * @param num1 valor que usaremos para para calcular el inverso.
 	 * @return <b>total</b> redondeando a un numero con <b>9 decimales</b>.
