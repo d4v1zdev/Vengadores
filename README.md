@@ -21,7 +21,7 @@ Para ello usamos a mayores JavaDoc para un correcto y estiloso uso de los coment
 - principal
   - [ ] Calculadora
     - [ ] Llamadas Suma
-    - [ ] Llamadas Resta
+    - [x] Llamadas Resta
     - [ ] Llamadas Producto
     - [x] Llamadas Cociente
 
