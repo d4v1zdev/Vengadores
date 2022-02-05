@@ -1,4 +1,7 @@
 package principal;
+
+import clases_indiv.Cociente;
+
 /*
  * Clase principal Calculadora
  */
