@@ -28,7 +28,7 @@ public class Resta {
 	 * @param y Representa un número entero que restaría al valor introducido. 
 	 * @return Devuelve el valor de la resta de los parámetros intriducidos.
 	 */
-	public double restaDosI (int x, int y) {
+	public int restaDosI (int x, int y) {
 		return x - y;
 	}
 	

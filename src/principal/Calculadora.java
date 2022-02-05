@@ -1,6 +1,6 @@
 package principal;
 
-import clases_indiv.Cociente;
+import clases_indiv.*;
 
 /*
  * Clase principal Calculadora
@@ -13,6 +13,19 @@ public class Calculadora {
 		// LLAMADAS METODOS SUMA
 		
 		// LLAMADAS METODOS RESTA
+		
+		Resta r1 = new Resta();
+		
+		System.out.println("** RESTA DE TRES NÚMEROS REALES");
+		System.out.println("El resultado de la resta de 9,3 - 2,1 - 2,9 es: " + Math.floor(r1.restaTresD(9.3, 2.1, 2.9)));
+		
+		System.out.println("** RESTA DE DOS NÚMEROS REALES");
+		System.out.println("El resultado de la resta de 23,4 - 7,3 es: " + Math.floor(r1.restaDosD(23.4, 7.3)));
+		
+		System.out.println("** RESTA DE DOS NÚMEROS ENTEROS");
+		System.out.println("El resultado de la resta de 15 - 4  es: " + r1.restaDosI(15, 4));
+		
+		
 		
 		// LLAMADAS METODOS PRODUCTO
 		
