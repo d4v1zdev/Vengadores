@@ -4,7 +4,7 @@ package clases_indiv;
  * Declaracion de la clase <b>Cociente</b>, en la que tenemos varios metodos.
  *
  * @author d4v1z
- * @version 1.0
+ * @version 1.1
  *
  */
 public class Cociente {
@@ -63,7 +63,7 @@ public class Cociente {
 	/**
 	 * Metodo 3: Calculo del inverso multiplicativo. El inverso es el
 	 * <b>numero que debes multiplicar a cualquier numero diferente de 0</b> para que el
-	 * resultado sea 1. Tambien es conocido como <b>recıproco</b> tiene en cuenta si
+	 * resultado sea 1. Tambien es conocido como <b>reciproco</b> tiene en cuenta si
 	 * introducimos un valor 0, ya que el 0 no tiene inverso que lanzaria un error,
 	 * pero <b>no generaria excepcion</b>, nos indicaría que tipo de excepcion.
 	 * 
