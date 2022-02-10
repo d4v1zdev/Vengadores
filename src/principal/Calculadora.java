@@ -36,6 +36,21 @@ public class Calculadora {
 		System.out.println("El resultado de la resta de 15 - 4  es: " + r1.restaDosI(15, 4));
 
 		// LLAMADAS METODOS PRODUCTO
+		Producto operacion1 = new Producto();
+
+		// llamamos al metodo Producto2enteros
+		System.out.println("El resultado es " + operacion1.Producto2enteros(3, 6));
+
+		// llamamos al metodo Producto2reales
+		System.out.println("El resultado es " + operacion1.Producto2reales(2.3, -34));
+
+		// llamamos al metodo Producto3reales
+		System.out.println("El resultado es " + operacion1.Producto3reales(2.1, -6, 25));
+
+		// llamamos al metodo Potencia
+		System.out.println("El resultado es " + operacion1.Potencia(4, 5));
+
+
 
 		// LLAMADAS METODOS COCIENTE
 
