@@ -10,7 +10,7 @@ Para ello usamos a mayores JavaDoc para un correcto y estiloso uso de los coment
 
 - clases_indiv
 
-  - [ ] Clase Suma
+  - [x] Clase Suma
 
   - [x] Clase Resta
 
@@ -20,8 +20,8 @@ Para ello usamos a mayores JavaDoc para un correcto y estiloso uso de los coment
 
 - principal
   - [ ] Calculadora
-    - [ ] Llamadas Suma
-    - [ ] Llamadas Resta
+    - [x] Llamadas Suma
+    - [x] Llamadas Resta
     - [ ] Llamadas Producto
     - [x] Llamadas Cociente
 
@@ -29,7 +29,7 @@ Para ello usamos a mayores JavaDoc para un correcto y estiloso uso de los coment
 
 | CLASES   | METODOS                                                      | EXCEPCIONES                                            |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------ |
-| Suma     |                                                              |                                                        |
+| Suma     | sumaReales()>>Suma de 2 números reales, sumaEnt()>> suma de 2 números enteros, sumaRealesTrio()>> suma de 3 números reales, sumaAcumulada()>> suma de números enteros con valor acumulado |                                                        |
 | Resta    | restaDosD()>>Resta números reales, restaDosI()>> resta 2 numeros enteros, restaTresD()>>calcula resta de 3 numeros reales, acumuladorResta()>> Acumula las restas que se han ido creando |                                                        |
 | Producto |                                                              |                                                        |
 | Cociente | cocEnterosTry() >> División enteros, cocReal() >> división numeros enteros,  inverso() >> Calculo inverso multiplicativo, calRaiz >> Raíz de un número | Dividir por 0, Raíz de número negativo, Recíproco de 0 |
@@ -40,9 +40,8 @@ Para ello usamos a mayores JavaDoc para un correcto y estiloso uso de los coment
 
 | CLASES   | LLAMADAS                                                     |
 | -------- | ------------------------------------------------------------ |
-| Suma     |                                                              |
+| Suma     | sumaReales(double num1, double num2), sumaEnt(int num1, int num2), sumaRealesTrio(double num1, double num2, double num3), sumaAcumulada(int num) |
 | Resta    | restaDosD(double x, double y), restaDosI(int x, int y), restaTresD(double x, double y, double c), acumuladorResta (int x) |
 | Producto |                                                              |
 | Cociente | cocEnterosTry(int num1, int num2), cocReal(double num1, double num2), inverso(double num1), calRaiz(double num1) |
-
 
