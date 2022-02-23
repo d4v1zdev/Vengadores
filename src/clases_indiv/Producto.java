@@ -1,4 +1,4 @@
-package javadoc;
+package clases_indev;
 
 /**
  * Clase que contiene los metodos para calcular el producto de 2 o 3 enteros,
