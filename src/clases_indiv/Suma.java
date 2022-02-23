@@ -1,4 +1,4 @@
-package clases_indev;;
+package clases_indev;
 
 public class Suma {
 
