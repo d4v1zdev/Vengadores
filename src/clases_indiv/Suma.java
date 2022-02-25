@@ -1,4 +1,6 @@
+
 package clases_indiv;
+
 
 public class Suma {
 
@@ -69,7 +71,7 @@ public class Suma {
 	 * parametro de entrada y la clase debera de guardar el valor acumulado. Rango
 	 * de la variable <b>int</b>: <b>-2.147.483.648 a 2.147.483.647</b>.
 	 * 
-	 * @param num sumando o valor que ira añadiendose al valor <b>resultado</b>.
+	 * @param num sumando o valor que ira aÃ±adiendose al valor <b>resultado</b>.
 	 * @return <b>Resultado</b>: Valor acumulado que sera la suma total de los
 	 *         valores <b>resultado</b> y <b>num</b>.
 	 * @throws Exception Si el valor supera el rango permitido
