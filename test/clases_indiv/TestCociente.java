@@ -1,4 +1,4 @@
-package junit5;
+package clases_indiv;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
