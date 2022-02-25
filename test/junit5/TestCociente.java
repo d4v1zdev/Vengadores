@@ -1,95 +1,167 @@
 package junit5;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
 import clases_indiv.Cociente;
 
-public class TestCociente {
-	private Cociente c1;
-	
+class TestCociente {
 
+    //private Object myObject;
+    private Cociente c1;
+
+
+    /**
+     * Test que consiste en probar que el método cocEnterosTry divide dos números enteros.
+     * También se prueba que si al segundo valor se le pone un 0, da error. 
+     */
+    @Test
+    void cocEnterosTry() {
+    	System.out.println("Test 1: División de dos números enteros, y si el segundo es 0 sale mensaje. ");
+    	c1 = new Cociente();
+    	
+        int num1 = 6;
+        int num2 = 2;
+        
+        int resultadoEsperado = c1.cocEnterosTry(num1, num2);
+        int resultadoObtenido = num1 / num2;
+        
+        assertEquals(resultadoObtenido, resultadoEsperado);
+        assertThrows(ArithmeticException.class, () -> {
+            int resultObtenido = num1 / 0;
+        });
+    }
+    
+    /**
+     * Con este metodo controlamos si se divide por 0, dando test correcto al dividir por 0,
+     * con lo que significa que efectivamente esta controlado.
+     */
+
+    @Test
+    void test_exception() {
+    	c1 = new Cociente();
+    	System.out.println("Test 2: División de dos números, el segundo es 0. ");
+        Exception exception = assertThrows(
+                ArithmeticException.class,
+                () -> divide((int) 10.2, 0));
+
+        assertEquals("/ by zero", exception.getMessage());
+
+        assertTrue(exception.getMessage().contains("zero"));
+
+    }
+
+    double divide(int num1, int num2) {
+        return num1 / num2;
+    }
+
+    
+    /**
+     * Test que prueba el método cocReal, que divide dos números reales. 
+     * @throws Exception Si el num2 es igual a 0, el sistema va lanzar una
+	 *                   excepcion, que indicaremos en el main.
+     */
+    @Test
+    void cocReal() throws Exception {
+    	System.out.println("Test 3: División de dos números reales.");
+    	c1 = new Cociente();
+        double num1 = 6.0;
+        double num2 = 2.0;
+        double resultadoEsperado = c1.cocReal(num1, num2);
+        double resultadoObtenido = num1 / num2;
+        assertEquals(resultadoObtenido, resultadoEsperado);
+
+    }
+
+    /**
+     * Test que prueba el método cocReal, que divide dos números reales, el segundo es 0.
+     * @throws Exception Si el num2 es igual a 0, el sistema va lanzar una
+	 *                   excepcion, que indicaremos en el main.
+     */
 	@Test
-	public void testCocEnterosTry() {
-		System.out.println("Test 1: División de dos números enteros.");
+	public void testcocReal0 () throws Exception {
+		System.out.println("Test 4:  División de dos números reales y el segundo es 0.");
 		c1 = new Cociente();
-		
-		assertTrue(c1.cocEnterosTry(8, 4)==((int)8/4));
-		assertTrue(c1.cocEnterosTry(9, 2)==((int)9/2));
-	}
-	
-	/*
-	@Test
-	public void testCocEnterosTrycon0() {
-		System.out.println("Test 2: División de dos números enteros y el segundo es 0. No levanta excepción.");
-		c1 = new Cociente();
-		
-		assertThrows (
-				ArithmeticException.class,
-				() -> c1.cocEnterosTry(18, 0));
-	}
-	
-	*/
-	
-	@Test
-	public void testCocEnterosTry0() {
-		System.out.println("Test 3: División de dos números enteros y el segundo es 0. Mensaje de error y 0. ");
-		c1 = new Cociente();
-		
-		assertEquals(0, c1.cocEnterosTry(8 , 0));
-	}
-	
-	@Test
-	public static void testcocRealcon0 () throws Exception {
-		System.out.println("Test 4: División de dos números reales y el segundo es 0.");
-		
 		assertThrows (
 				Exception.class,
-				() -> Cociente.cocReal(18.5, 0));
+				() -> c1.cocReal(6.0, 0));
 	}
-	
+
+
+    /**
+     * Test que prueba el inverso de un número real. 
+     * @throws Exception Se comprueba que excepcion devuelve al intentar hacer el
+	 *                   inverso de 0.
+     */
+    
+    @Test
+    void inverso() throws Exception {
+    	System.out.println("Test 5: Inverso multiplicativo.");
+    	c1 = new Cociente();
+        double num1 = 5.0;
+        
+        double resultadoEsperado = c1.inverso(num1);
+        double resultadoObtenido = 1 / num1;
+        
+        assertEquals(resultadoObtenido, resultadoEsperado);
+    }
+    
+    /**
+     * Test que prueba el inverso del número 0 y devuelve una excepción. 
+     * @throws Exception Se comprueba que excepcion devuelve al intentar hacer el
+	 *                   inverso de 0.
+     */
+    
 	@Test
-	public static void testcocReal () throws Exception {
-		System.out.println("Test 5: División de dos números reales.");
-		
-		assertEquals((10.4/2.2), Cociente.cocReal(10.4, 2.2));
-	}
-	
-	@Test
-	public static void testinverso0 () throws Exception {
+	public void testinverso0 () throws Exception {
 		System.out.println("Test 6: Inverso multiplicativo de 0.");
-		
+		c1 = new Cociente();
 		assertThrows (
 				Exception.class,
-				() -> Cociente.inverso(0));
+				() -> c1.inverso(0));
+	}
+
+
+	/**
+	 * Test que prueba la raíz cuadrada de un número positivo. 
+	 * @throws Exception Devuelve excepción si el número de la raíz cuadrada es negativo. 
+	 */
+    @Test
+    void calRaiz() throws Exception {
+    	System.out.println("Test 7: Raíz cuadrada de número positivo.");
+    	c1 = new Cociente();
+    	
+        double num1 = 9.0;
+        
+        double resultadoEsperado = c1.calRaiz(num1);
+        double resultadoObtenido = Math.sqrt(num1);
+        
+        assertEquals(resultadoObtenido, resultadoEsperado);
+
+    }
+    
+    
+	/**
+	 * Test que prueba la raíz cuadrada del número 0. 
+	 * @throws Exception Devuelve excepción si el número de la raíz cuadrada es negativo. 
+	 */
+	@Test
+	public void testcalRaiz0() throws Exception {
+		System.out.println("Test 8: Raíz cuadrada de 0.");
+		c1 = new Cociente();
+		
+		assertEquals(Math.sqrt(0), c1.calRaiz(0));
 	}
 	
+	/**
+	 * Test que prueba la raíz cuadrada de un número negativo, devuelve una excepción. 
+	 * @throws Exception Devuelve excepción si el número de la raíz cuadrada es negativo. 
+	 */
 	@Test
-	public static void testinverso () throws Exception {
-		System.out.println("Test 7: Inverso multiplicativo");
-		
-		assertEquals((1/5), Cociente.inverso(5));
-	}
-	
-	@Test
-	public static void testcalRaiz() throws Exception {
-		System.out.println("Test 8: Inverso multiplicativo.");
-		
-		assertEquals(Math.sqrt(9), Cociente.calRaiz(9));
-	}
-	
-	@Test
-	public static void testcalRaiz0() throws Exception {
-		System.out.println("Test 9: Inverso multiplicativo de 0.");
-		
-		assertEquals(Math.sqrt(0), Cociente.calRaiz(0));
-	}
-	
-	@Test
-	public static void testcalRaizNeg () throws Exception {
-		System.out.println("Test 10: Inverso multiplicativo de número negativo.");
-		
+	public void testcalRaizNeg () throws Exception {
+		System.out.println("Test 9: Raíz cuadrada de un número negativo. ");
+		c1 = new Cociente();
 		assertThrows (
 				Exception.class,
-				() -> Cociente.calRaiz(-4));
+				() -> c1.calRaiz(-4));
 	}
 }
