@@ -1,4 +1,4 @@
-package calculadora_main;
+package clases_indiv;
 
 public class Suma {
 

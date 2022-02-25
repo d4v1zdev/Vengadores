@@ -20,7 +20,7 @@ public class Cociente {
 
 	/**
 	 * Metodo 1: <b>Division de enteros (int)</b>, tiene en cuenta si introducimos
-	 * un valor 0, con lo que lanzaria un error, pero <b>no generaria excepcion</b>.
+	 * un valor 0, con lo que lanzaria un mensaje de error, pero <b>no generaria excepcion</b>.
 	 * 
 	 * @param num1 valor que usaremos para el dividendo.
 	 * @param num2 valor que usaremos para el divisor.
