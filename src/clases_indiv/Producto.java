@@ -95,4 +95,5 @@ public class Producto {
         totalE = (int) Math.pow(exponente, base);
         return totalE;
 
+	}
 }
