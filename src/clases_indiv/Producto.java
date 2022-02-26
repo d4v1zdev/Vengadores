@@ -91,9 +91,8 @@ public class Producto {
 	 *         numero de veces que el exponente determine.
 	 */
 	public int Potencia(int base, int exponente) {
-		int totalE = 1;
-		totalE = base ^ exponente;
-		return totalE;
-	}
+        int totalE = 1;
+        totalE = (int) Math.pow(exponente, base);
+        return totalE;
 
 }
